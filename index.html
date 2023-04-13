@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>HOME FINDER</title>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head> 
+
+  <body style="margin : 0px; overflow: hidden;">
+
+    <div class="header">
+        <header>
+          <!-- <image src="assets/more.png" class="more"></image> -->
+            <h1>Home Finder</h1>
+            <select id="citySelector" class="custom-select">
+              <option>Bengaluru</option>
+              <option>Bombay</option>
+              <option>Delhi</option>
+            </select>
+        </header>
+    </div>
+
+    <div id="container" class="container" >
+      <!-- <input type="text" placeholder="Search.."> -->
+      <!-- <div class="button-row">
+        <button class="filter-button">Filter by cost</button>
+        <button class="filter-button">Filter by size</button>
+        <button class="filter-button">Filter by location</button>
+      </div> -->
+        <div class="row">
+          <div class="col-4">
+            <img src="./assets/205.jpeg" class="circular-image" id="C204, NCC Meadows">
+          </div>
+          <div class="col-4">
+            <img src="./assets/305.jpeg" class="circular-image" id="C304, NCC Meadows">
+          </div>
+          <div class="col-4">
+            <img src="./assets/405.jpeg" class="circular-image" id="C404, NCC Meadows">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4">
+            <img src="./assets/505.jpeg" class="circular-image" id="A204, NCC Urban">
+          </div>
+          <div class="col-4">
+            <img src="./assets/605.jpeg" class="circular-image" id="C604, NCC Meadows">
+          </div>
+          <div class="col-4">
+            <img src="./assets/705.jpeg" class="circular-image" id="C704, NCC Meadows">
+          </div>
+        </div>
+    </div>
+
+    
+    <p id="testt" class="test">Sorry, this page is not ready yet</p>
+
+    
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="modalImage" class="modal-image">
+          <h2 id="modalTitle">C204, NCC Meadows</h2>
+          <p id="modalText">Buying cost goes here</p>
+          <p id="modalText2">Renting cost goes here</p>
+          <h4> 3 bedroom, 2 bathrooms</h4>
+          <h3> Region: Yelahanka</h3>
+          <button class="button" id="myButton">Click to view house</button>
+        </div>
+      </div>
+
+      <script>
+
+          const citySelector = document.getElementById("citySelector");
+          const container= document.getElementById("container");
+          const text= document.getElementById("testt");
+          const button= document.getElementById("myButton2");
+
+
+          citySelector.addEventListener("change", function() {
+          if (citySelector.value === "Delhi") {
+            container.style.display = "none";
+            text.style.display = "flex";
+          } 
+          if (citySelector.value === "Bombay") {
+            container.style.display = "none";
+            text.style.display = "flex";
+          } 
+          if (citySelector.value === "Bengaluru") {
+            container.style.display = "flex";
+            text.style.display = "none";
+          } 
+        });
+
+
+
+
+        var modal = document.getElementById("myModal");
+        var images = document.getElementsByClassName("circular-image");
+        var modalImage = document.getElementById("modalImage");
+        var modalTitle = document.getElementById("modalTitle");
+        var modalText = document.getElementById("modalText");
+        var modalText2 = document.getElementById("modalText2");
+        var close = document.getElementsByClassName("close")[0];
+
+        var arr=this.id;
+        var no=[];
+
+        for (var i = 0; i < images.length; i++) {
+        images[i].onclick = function() {
+            modal.style.display = "block";
+            modalImage.src = this.src;
+            modalTitle.innerHTML= this.id;
+            modalText.innerHTML = "Buying cost: 25 lakh";
+            modalText2.innerHTML= "Renting cost: 30,000"
+        };
+        }
+
+        close.onclick = function() {
+        modal.style.display = "none";
+        };
+
+        window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        };
+
+        document.getElementById("myButton").addEventListener("click", function() {
+            window.location.href = "./C204/204.html";
+        });
+      </script>
+  </body>
+
+</html>

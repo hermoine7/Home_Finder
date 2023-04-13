@@ -1,0 +1,158 @@
+body{
+    align-items: center;
+    justify-content: center;
+    background-color: #B7ACA9;
+}
+
+.more {
+  height:30px;
+  width:30px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .col-4 {
+    width: 320px;
+    padding: 20px;
+  }
+  
+  .circular-image {
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }  
+  header {
+    background-color: #D5D2CD;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    color: black;
+  }
+    
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #D8D8D8;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+  }  
+
+  .modal-image {
+    width: 250px;
+    height: 250px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #B6AEAA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    align-self: center;
+  }
+
+.test{
+  display: none;
+  align-self: center;
+  justify-self: center;
+  align-content: center;
+  justify-content: center;
+}
+
+select {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  outline: 0;
+  background: #fff;
+  padding: 15px;
+  border-radius: 9px;
+}
+
+input {
+  float: right;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 16px;
+  font-size: 17px;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 14px;
+
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.filter-button {
+  margin-top: 10px;
+  background-color: #538EAF;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width: 300px; 
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home Finder</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+
+    <script src="./createstuff.js"></script>
+    <script src="./buttons.js"></script>
+    <link href="../style.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene id="main-scene" create-buttons>
+      <a-sky id="main-container" radius="10000" material="src: ./pics/place-1.png"> </a-sky>
+
+      <!-- Places Container -->
+      <a-entity id="places-container" ></a-entity>
+
+      <!-- CAMERA -->
+      <a-camera id="camera" wasd-controls="enabled:false;">
+
+        <!-- CURSOR -->
+        <a-entity
+          id="camera-cursor"
+          cursor
+          position="0 0 -2"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: #fff; shader: flat"
+        >
+        </a-entity>
+
+        <!-- PURCHASE BUTTON -->
+      </a-camera>
+
+      <a-entity
+        id="buybutton"
+        position="0 -1 -4"
+        geometry="primitive: plane; width: 2; height: 0.5" 
+        material="color: #F68D2D"
+        create-pay
+      >
+      <a-text value="Buy now" align="center" color="white" width="5" ></a-text>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
